@@ -28,4 +28,21 @@ flag1 = 0
 if max(R) <= b and a <= min(R) :
     print('The first condition is accepted')
     flag1 = 1
-else: print('The first conditin is not accepted')
+else: print('The first condition is not accepted')
+
+
+poly3 = np.polyder(poly2)
+roots2 = np.roots(poly3)
+R2 =[]
+
+for i in roots2:
+    if np.isreal(i) == 1 and a <= i <= b:
+        R2.append(abs(poly2(i)))
+R2.append(abs(poly2(a)))
+R2.append(abs(poly2(b)))
+
+flag2 = 0
+if 0 < max(R2) < 1 :
+    print('The second condition is accepted')
+    flag2 = 1
+else: print('The second condition is not accepted')
