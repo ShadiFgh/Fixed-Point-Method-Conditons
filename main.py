@@ -46,3 +46,12 @@ if 0 < max(R2) < 1 :
     print('The second condition is accepted')
     flag2 = 1
 else: print('The second condition is not accepted')
+
+
+if flag1 == 1 and flag2 == 1:
+
+    print('Please enter your initial guess:')
+    guess = float(input())
+    print('Please enter the number of iteration:')
+    itr = int(input())
+    print(find_fixed_point(poly, guess, itr))
